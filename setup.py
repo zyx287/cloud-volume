@@ -30,11 +30,12 @@ FP_CODECS = [
 OTHER_FORMATS = [
   "blosc",
   "intern",
+  "zstandard",
 ]
 
 setuptools.setup(
-  name="cloud-volume",
-  version="10.5.0",
+  name="cloud_volume",
+  version="12.0.0",
   setup_requires=[
     'numpy<1.17; python_version<"3.5"',
     'numpy; python_version>="3.5"',
@@ -56,12 +57,12 @@ setuptools.setup(
     "skeleton_viewer": [ 'matplotlib>=3.6' ],
     "all_viewers": [ 'vtk', 'matplotlib>=3.6' ],
     "dask": [ 'dask[array]' ],
-    "zarr": [ 'blosc' ],
+    "zarr": [ 'blosc', 'zstandard' ],
     "test": [ "pytest", "pytest-cov", "codecov", "requests_mock", "scipy"],
 
     # image compression codecs
     "blosc": [ "blosc" ],
-    "jpegxl": [ "imagecodecs" ],
+    "jxl": [ "imagecodecs" ],
     "png": [ "pyspng-seunglab" ],
     "jpeg": [ "simplejpeg" ],
     "fpzip": [ "fpzip" ],
